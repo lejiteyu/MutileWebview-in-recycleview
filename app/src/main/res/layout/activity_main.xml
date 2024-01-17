@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/url_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/text_blue_light"
+        android:padding="1dp">
+
+        <Button
+            android:id="@+id/windowCountBtn"
+            android:layout_width="28dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/btn_dark"
+            android:padding="2dp"
+            android:text="1/2"
+            android:textColor="#000000"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/favicon"
+            android:layout_width="28dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/windowCountBtn"
+            android:background="@color/white"
+            android:src="@mipmap/ic_launcher" />
+
+        <AutoCompleteTextView
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/favicon"
+            android:background="@color/white"
+            android:gravity="center|left"
+            android:inputType="textUri"
+            android:padding="5dp"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:text="標題"
+            android:textColor="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/webview_layout"
+        android:layout_below="@+id/url_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/higlight_blue"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
